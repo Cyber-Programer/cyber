@@ -12,55 +12,65 @@
         body {
             background-color: rgba(0, 0, 0, 0.912);
             color: white;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            height: 100vh;
         }
+
+        
 
         .main {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 100vh;
             margin-bottom: 10%;
+            padding: 20px;
         }
 
         img {
             width: 200px;
             border-radius: 50%;
             padding: 10px;
-            margin-top: 50px; /* Adjust this value to add space */
+            margin-top: 50px;
             border: 2px solid white;
         }
-        
 
-        a{
+        a {
             text-decoration: none;
             color: white;
         }
 
-        h5{
+        h5 {
             margin-top: 0;
             padding: 2px;
             margin: 0;
+
+            font-size: 20px;
         }
 
         footer {
-            background-color:rgba(0, 0, 0, 0.912); /* Example background color for the footer */
-            padding: 20px; /* Add padding for better spacing */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .social-icons {
-            display: flex; /* Arrange icons in a row */
-            justify-content: center; /* Center the icons horizontally */
-            align-items: center; /* Center the icons vertically */
-        }
-        
-        .social-icons a {
-            margin: 0 10px; /* Adjust margin between icons */
-            font-size: 24px; /* Adjust the icon size */
-            color: white; /* Adjust icon color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
         }
 
-        .x{
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .x {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -70,11 +80,11 @@
             margin-top: 10px;
         }
 
-        #x{
-            padding-top:10px;
+        #x {
+            padding-top: 10px;
         }
 
-        .info{
+        .info {
             display: flex;
             flex-direction: column;
             text-align: left;
@@ -82,26 +92,96 @@
             margin-left: 20px;
         }
 
-        #info{
+        #info {
             padding: 5px;
+
         }
 
-        .underline{
+        .underline {
             background-color: white;
             height: 2px;
             width: 100%;
             margin-top: 10px;
         }
 
+        .aboutMe {
+            padding-left: 10px;
+            margin-top: 0; /* Adjust this margin or set it to 0 */
+        }
+        
 
-        #me{
+        #me {
             text-align: left;
             margin-right: 200px;
+
+        }
+
+
+        /* Add a hover effect to multiple elements */
+        h2,h3, h5, #info, #me, label , #aboutx {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Apply a scaling effect on hover for multiple elements */
+        h2:hover,h3:hover,h5:hover, #info:hover, #me:hover, label:hover ,#aboutx:hover{
+            transform: scale(1.1);
+        }
+
+        i{
+            transition: transform 0.3s ease-in-out;
+        }
+
+        i:hover{
+            transform: scale(1.3);
+            color: rgb(0, 183, 255);
         }
 
         li{
+            transition: transform 0.5s ease-in-out;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        li {
             padding: 8px;
         }
+
+        .myskills {
+            margin-right: 250px;
+            padding-bottom: 10px;
+            padding-left: 50px;
+        }
+
+        #meo{
+
+            width: 60px;
+            height: 40px;
+            border: none;
+            padding: 0;
+
+        }
+        #description{
+            margin-top: -10px;
+        }
+
+        .aboutx:hover,
+        .myskills label:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Default styles for .main element */
+
+        @media screen and (min-width: 991px){
+            .main{
+                font-size: 40px;
+            }      
+        }
+
+  
+  
 
     </style>
 </head>
@@ -109,63 +189,65 @@
     <div class="main">
         <img src="https://avatars.githubusercontent.com/u/125746506?v=4" alt="">
         <h2>Cyber-Programer</h2>
-        <a href="https://www.facebook.com/root.lovs/" target="_blank"><h5>ADMIN: MD siFaT isLaM</h5></a>
+        <a href="https://www.facebook.com/root.lovs/" target="_blank"><h5 title="click">ADMIN: MD siFaT isLaM</h5></a>
         
-        
-   
         <div class="info">
-            <label for="text" id="info">🔒 Hack the planet. Secure the future🔒 </label>
-            <label for="text" id="info">🚀Hacking is not about breaking into systems, but about breaking through barriers of knowledge.🚀</label>
+            <label for="text" class="info">🔒 Hack the planet. Secure the future🔒 </label>
+            <label for="text" class="info">🚀 Hacking is not about breaking into systems, but about breaking through barriers of knowledge. 🚀</label>
         </div>
         
         <div class="underline"></div>
 
         <div class="aboutMe">
             <h3 id="me">About Me:</h3>
-            <label for="text">I am a python Developer from Earth.</label>
+            <label  for="text" class="aboutx">I am a Developer from Earth. <img id="meo" src="https://camo.githubusercontent.com/63371d36886ee658f5a97401f393e1ab1684b2fd3de674b8f5efc7d410b2a3d0/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f57556c706c634d704f43456d5447427442572f67697068792e676966" alt=""></label>
 
             <ul>
                 <li>🔭 I'm working as a Python developer and web developer.</li>
                 <li>🌱 I'm also learning Cybersecurity.</li>
                 <li>⚡ In my free time, I program.</li>
-                
             </ul>
         </div>
 
-    </div>
-
-   
+        <div class="myskills">
+            <h3>My skills:</h3>
+            <label for="text">I am currently learning:</label>
+        
+            <ul>
+                <li>Python <i class="fab fa-python"></i></li>
+                <li>HTML <i class="fab fa-html5"></i></li>
+                <li>CSS <i class="fab fa-css3"></i></li>
+                <li>JS <i class="fab fa-js"></i></li>
+                <li>Bash <i class="far fa-heart"></i></li>
+            </ul>
+        </div>
+        
+        
 
     <footer>
         <div class="social-icons">
             <a href="https://www.facebook.com/mdabdurrahman.rony.33" target="_blank">
                 <i class="fab fa-facebook-f"></i>
             </a>
-
-            </a>
             <a href="https://twitter.com/root_lovs" target="_blank">
                 <i class="fab fa-twitter"></i>
             </a>
-
             <a href="https://www.pinterest.com/root_lovs/" target="_blank">
                 <i class="fas fa-image"></i>
             </a>
-
             <a href="https://github.com/cyber-programer/" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-
             <a href="https://t.me/root_lovs" target="_blank">
                 <i class="fab fa-telegram"></i>
             </a>
-
             <a href="#" target="_blank">
                 <i class="fas fa-heart"></i>
             </a>
         </div>
         <div class="x">
-            <label for="text">copyright by @cyber-programer </label>
-            <label for="text" id="x">Maked by : Md SiFaT isLaM</label>
+            <label for="text">Copyright by @cyber-programer</label>
+            <label for="text" id="x">Made by: Md SiFaT isLaM</label>
         </div>
     </footer>
     
