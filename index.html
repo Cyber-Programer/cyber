@@ -17,9 +17,7 @@
             font-size: 20px;
             height: 100vh;
         }
-
         
-
         .main {
             display: flex;
             align-items: center;
@@ -250,6 +248,37 @@
             <label for="text" id="x">Made by: Md SiFaT isLaM</label>
         </div>
     </footer>
+
+
+    <audio id="myAudio" src="xyz.mp3" preload="auto" loop></audio>
     
+    <script>
+        // Play audio on the first click
+        let clicked = false;
+        document.addEventListener('click', function() {
+            if (!clicked) {
+                let audio = document.getElementById("myAudio");
+                audio.play();
+                clicked = true;
+            }
+        });
+
+        // Vibration effect and animation
+        document.addEventListener('click', function() {
+            let body = document.querySelector('body');
+            body.classList.add('vibrate'); // Add class to trigger animation
+            // Check if the browser supports the Vibration API
+            if ("vibrate" in navigator) {
+                // Vibrate for 50ms
+                navigator.vibrate(50);
+            } else {
+                console.log("Vibration not supported");
+            }
+            // Remove animation class after 1 second to allow re-triggering
+            setTimeout(function() {
+                body.classList.remove('vibrate');
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
