@@ -244,8 +244,13 @@
 
 
     <audio id="myAudio" src="xyz.mp3" preload="auto" loop></audio>
-    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script>
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector("#main"),
+          smooth: true
+        });
+        
         // Play audio on the first click
         let clicked = false;
         document.addEventListener('click', function() {
